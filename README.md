@@ -150,7 +150,7 @@ Projects related to **AI concepts and intelligent systems**.
 
 # 👨‍💻 Author
 
-**Your Name**
+**Eyob Begashaw**
 
 Computer Science Student
 Interested in:
