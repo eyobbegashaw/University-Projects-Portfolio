@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.grainmill.controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" spacing="20.0" styleClass="login-container" 
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" 
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         
+         <Label text="Grain Milling System" styleClass="login-title">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         
+         <VBox alignment="CENTER_LEFT" spacing="15.0" styleClass="form-container">
+            <Label text="Username" styleClass="form-label" />
+            <TextField fx:id="usernameField" promptText="Enter your username" 
+                      styleClass="form-textfield" />
+            
+            <Label text="Password" styleClass="form-label" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" 
+                          styleClass="form-textfield" />
+            
+            <Label text="Role" styleClass="form-label" />
+            <ComboBox fx:id="roleComboBox" promptText="Select Role" 
+                     styleClass="form-combobox" />
+            
+            <Button fx:id="loginButton" mnemonicParsing="false" 
+                   onAction="#handleLogin" text="Login" 
+                   styleClass="login-button" />
+            
+            <Label fx:id="errorLabel" styleClass="error-label" visible="false" 
+                   text="Invalid username or password" />
+         </VBox>
+      </VBox>
+   </children>
+</AnchorPane>

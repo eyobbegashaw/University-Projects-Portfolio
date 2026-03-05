@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.grainmill.controller.AdminDashboardController">
+   <top>
+      <VBox styleClass="header">
+         <HBox alignment="CENTER_LEFT" styleClass="header-content">
+            <Label text="Admin Dashboard" styleClass="header-title" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" styleClass="welcome-label" />
+            <Button mnemonicParsing="false" onAction="#handleLogout" text="Logout" 
+                   styleClass="logout-button" />
+         </HBox>
+         <Separator />
+      </VBox>
+   </top>
+   
+   <left>
+      <VBox spacing="10" styleClass="sidebar">
+         <padding>
+            <Insets top="20.0" right="10.0" bottom="20.0" left="10.0" />
+         </padding>
+         
+         <Button text="Dashboard Overview" styleClass="sidebar-button" 
+                onAction="#showDashboardOverview" />
+         <Button text="Financial Reports" styleClass="sidebar-button" 
+                onAction="#showFinancialReports" />
+         <Button text="Price Management" styleClass="sidebar-button" 
+                onAction="#showPriceManagement" />
+         <Button text="Asset Management" styleClass="sidebar-button" 
+                onAction="#showAssetManagement" />
+         <Button text="User Management" styleClass="sidebar-button" 
+                onAction="#showUserManagement" />
+         <Button text="System Analytics" styleClass="sidebar-button" 
+                onAction="#showSystemAnalytics" />
+      </VBox>
+   </left>
+   
+   <center>
+      <StackPane fx:id="contentArea" styleClass="content-area">
+         <Label text="Welcome to Admin Dashboard" styleClass="welcome-message" />
+      </StackPane>
+   </center>
+</BorderPane>

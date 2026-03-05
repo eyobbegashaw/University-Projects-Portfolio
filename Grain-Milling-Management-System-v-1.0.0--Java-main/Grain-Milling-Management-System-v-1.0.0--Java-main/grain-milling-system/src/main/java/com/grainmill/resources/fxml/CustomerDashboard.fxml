@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.grainmill.controller.CustomerDashboardController">
+   <top>
+      <VBox styleClass="header">
+         <HBox alignment="CENTER_LEFT" styleClass="header-content">
+            <Label text="Grain Milling Service" styleClass="header-title" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" styleClass="welcome-label" />
+            <Button mnemonicParsing="false" onAction="#handleLogout" text="Logout" 
+                   styleClass="logout-button" />
+         </HBox>
+         <Separator />
+      </VBox>
+   </top>
+   
+   <left>
+      <VBox spacing="10" styleClass="sidebar">
+         <padding>
+            <Insets top="20.0" right="10.0" bottom="20.0" left="10.0" />
+         </padding>
+         
+         <Button text="New Order" styleClass="sidebar-button" 
+                onAction="#showNewOrder" />
+         <Button text="My Orders" styleClass="sidebar-button" 
+                onAction="#showMyOrders" />
+         <Button text="My Profile" styleClass="sidebar-button" 
+                onAction="#showMyProfile" />
+         <Button text="Track Order" styleClass="sidebar-button" 
+                onAction="#showTrackOrder" />
+      </VBox>
+   </left>
+   
+   <center>
+      <StackPane fx:id="contentArea" styleClass="content-area">
+         <Label text="Welcome to Grain Milling Service" styleClass="welcome-message" />
+      </StackPane>
+   </center>
+</BorderPane>

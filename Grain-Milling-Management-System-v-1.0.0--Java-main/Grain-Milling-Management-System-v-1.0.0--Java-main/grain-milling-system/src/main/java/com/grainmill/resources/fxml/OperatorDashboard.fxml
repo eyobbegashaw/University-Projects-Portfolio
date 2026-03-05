@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.grainmill.controller.OperatorDashboardController">
+   <top>
+      <VBox styleClass="header">
+         <HBox alignment="CENTER_LEFT" styleClass="header-content">
+            <Label text="Operator Dashboard" styleClass="header-title" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" styleClass="welcome-label" />
+            <Button mnemonicParsing="false" onAction="#handleLogout" text="Logout" 
+                   styleClass="logout-button" />
+         </HBox>
+         <Separator />
+      </VBox>
+   </top>
+   
+   <left>
+      <VBox spacing="10" styleClass="sidebar">
+         <padding>
+            <Insets top="20.0" right="10.0" bottom="20.0" left="10.0" />
+         </padding>
+         
+         <Button text="Daily Transactions" styleClass="sidebar-button" 
+                onAction="#showDailyTransactions" />
+         <Button text="Online Orders" styleClass="sidebar-button" 
+                onAction="#showOnlineOrders" />
+         <Button text="Production Records" styleClass="sidebar-button" 
+                onAction="#showProductionRecords" />
+         <Button text="Inventory" styleClass="sidebar-button" 
+                onAction="#showInventory" />
+         <Button text="Customer Accounts" styleClass="sidebar-button" 
+                onAction="#showCustomerAccounts" />
+      </VBox>
+   </left>
+   
+   <center>
+      <StackPane fx:id="contentArea" styleClass="content-area">
+         <Label text="Welcome to Operator Dashboard" styleClass="welcome-message" />
+      </StackPane>
+   </center>
+</BorderPane>
